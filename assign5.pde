@@ -385,8 +385,7 @@ void draw() {
         break;
       }
     }
-    print("\ngroundY = ", playerY);
-
+    
     image(groundhogDisplay, playerX, playerY);
 
     // If player is now moving?
@@ -621,7 +620,6 @@ int getEnemyIndexByRow(int row) {        // Requirement #6
 }
 
 void drawCaution() {     
-  print("in");
   // Requirement #6
   for (int r = playerRow + 5; r <= playerRow+5; r++) {
     int index = getEnemyIndexByRow(r);
