@@ -173,8 +173,6 @@ void initSoldiers() {
   for (int i = 0; i < soldierX.length; i++) {
     soldierX[i] = random(-SOIL_SIZE, width);
     soldierY[i] = SOIL_SIZE * ( i * 4 + floor(random(4)));
-    print("index = ", i);
-    print(" soldiery= ", soldierY[i]);
   }
 }
 
@@ -209,9 +207,6 @@ void initClocks() {
 }
 
 void draw() {
-  print("row= ", playerRow);
-  print("\nplayery= ", playerY);
-
 
   switch (gameState) {
 
@@ -633,10 +628,6 @@ void drawCaution() {
     if (index != -1) {
       float caution_x = soldierX[index];
       float caution_y = ((r)-playerRow)*SOIL_SIZE;
-      // print("x y = ");
-      //print(caution_x);
-      print("\nsoldierY= ", soldierY[index]);
-      print("\n cautiony= ", caution_y);
       image(caution, caution_x, caution_y);
     }
   }    
